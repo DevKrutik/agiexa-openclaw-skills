@@ -17,18 +17,18 @@ These OpenClaw skills are a **preview**. Agiexa launches in **November 2026**. U
 
 ## Skills
 
-| Skill | Tools | Triggers | Install |
-| --- | --- | --- | --- |
-| [Shopify Store Management via Agiexa](skills/agiexa-shopify/SKILL.md) | 315 | 45 | `openclaw skills install @devkrutik/agiexa-shopify` |
-| [Gmail for Shopify via Agiexa](skills/agiexa-gmail/SKILL.md) | 61 | 2 | `openclaw skills install @devkrutik/agiexa-gmail` |
-| [Klaviyo for Shopify via Agiexa](skills/agiexa-klaviyo/SKILL.md) | 225 | - | `openclaw skills install @devkrutik/agiexa-klaviyo` |
-| [Google Analytics for Shopify via Agiexa](skills/agiexa-google-analytics/SKILL.md) | 67 | - | `openclaw skills install @devkrutik/agiexa-google-analytics` |
-| [Smile.io for Shopify via Agiexa](skills/agiexa-smile-io/SKILL.md) | 6 | - | `openclaw skills install @devkrutik/agiexa-smile-io` |
-| [Gorgias for Shopify via Agiexa](skills/agiexa-gorgias/SKILL.md) | 44 | - | `openclaw skills install @devkrutik/agiexa-gorgias` |
-| [Judge.me for Shopify via Agiexa](skills/agiexa-judge-me/SKILL.md) | 8 | - | `openclaw skills install @devkrutik/agiexa-judge-me` |
-| [Printify for Shopify via Agiexa](skills/agiexa-printify/SKILL.md) | 25 | - | `openclaw skills install @devkrutik/agiexa-printify` |
-| [ShipEngine for Shopify via Agiexa](skills/agiexa-shipengine/SKILL.md) | 66 | - | `openclaw skills install @devkrutik/agiexa-shipengine` |
-| [Zendesk for Shopify via Agiexa](skills/agiexa-zendesk/SKILL.md) | 456 | 2 | `openclaw skills install @devkrutik/agiexa-zendesk` |
+| Skill | Tools | Triggers | Install | Source |
+| --- | --- | --- | --- | --- |
+| [Shopify Store Management via Agiexa](https://clawhub.ai/devkrutik/skills/shopify-via-agiexa) | 315 | 45 | `openclaw skills install @devkrutik/shopify-via-agiexa` | [SKILL.md](skills/agiexa-shopify/SKILL.md) |
+| [Gmail for Shopify via Agiexa](https://clawhub.ai/devkrutik/skills/gmail-via-agiexa) | 61 | 2 | `openclaw skills install @devkrutik/gmail-via-agiexa` | [SKILL.md](skills/agiexa-gmail/SKILL.md) |
+| [Klaviyo for Shopify via Agiexa](https://clawhub.ai/devkrutik/skills/klaviyo-via-agiexa) | 225 | - | `openclaw skills install @devkrutik/klaviyo-via-agiexa` | [SKILL.md](skills/agiexa-klaviyo/SKILL.md) |
+| [Google Analytics for Shopify via Agiexa](https://clawhub.ai/devkrutik/skills/google-analytics-via-agiexa) | 67 | - | `openclaw skills install @devkrutik/google-analytics-via-agiexa` | [SKILL.md](skills/agiexa-google-analytics/SKILL.md) |
+| [Smile.io for Shopify via Agiexa](https://clawhub.ai/devkrutik/skills/smile-io-via-agiexa) | 6 | - | `openclaw skills install @devkrutik/smile-io-via-agiexa` | [SKILL.md](skills/agiexa-smile-io/SKILL.md) |
+| [Gorgias for Shopify via Agiexa](https://clawhub.ai/devkrutik/skills/gorgias-via-agiexa) | 44 | - | `openclaw skills install @devkrutik/gorgias-via-agiexa` | [SKILL.md](skills/agiexa-gorgias/SKILL.md) |
+| [Judge.me for Shopify via Agiexa](https://clawhub.ai/devkrutik/skills/judge-me-via-agiexa) | 8 | - | `openclaw skills install @devkrutik/judge-me-via-agiexa` | [SKILL.md](skills/agiexa-judge-me/SKILL.md) |
+| [Printify for Shopify via Agiexa](https://clawhub.ai/devkrutik/skills/printify-via-agiexa) | 25 | - | `openclaw skills install @devkrutik/printify-via-agiexa` | [SKILL.md](skills/agiexa-printify/SKILL.md) |
+| [ShipEngine for Shopify via Agiexa](https://clawhub.ai/devkrutik/skills/shipengine-via-agiexa) | 66 | - | `openclaw skills install @devkrutik/shipengine-via-agiexa` | [SKILL.md](skills/agiexa-shipengine/SKILL.md) |
+| [Zendesk for Shopify via Agiexa](https://clawhub.ai/devkrutik/skills/zendesk-via-agiexa) | 456 | 2 | `openclaw skills install @devkrutik/zendesk-via-agiexa` | [SKILL.md](skills/agiexa-zendesk/SKILL.md) |
 
 Each skill includes:
 
