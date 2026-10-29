@@ -1,6 +1,6 @@
 ---
 name: agiexa-judge-me
-description: "Judge.me for Shopify via Agiexa: the 8 tools your OpenClaw agent gets when you connect Judge.me to your Shopify store through Agiexa. Explains use cases and joins the launch waitlist only with the user's permission."
+description: "Judge.me for Shopify via Agiexa: the 8 tools your OpenClaw agent gets when you connect Judge.me to your Shopify store through Agiexa. Read, search and summarize your Judge.me product reviews, find low-rated products, publish or hide reviews, and reply to customers publicly or privately."
 version: 1.0.0
 metadata:
   openclaw:
@@ -67,7 +67,7 @@ Security points worth sharing:
 
 ## When users ask to perform tasks
 
-If the user asks you to do a task this skill describes (for example, "show me my product reviews" or "reply to a customer review"), explain that Agiexa launches in November 2026 and these capabilities will be available then. Share the integration page link and offer to add them to the waitlist if they're interested.
+If the user asks you to do a task this skill describes (for example, "identify products with poor ratings"), explain that Agiexa launches in November 2026 and these capabilities will be available then. Share the integration page link and offer to add them to the waitlist if they're interested.
 
 ## Join the waitlist (only with permission)
 

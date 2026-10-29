@@ -1,6 +1,6 @@
 ---
 name: agiexa-shipengine
-description: "ShipEngine for Shopify via Agiexa: the 66 tools your OpenClaw agent gets when you connect ShipEngine to your Shopify store through Agiexa. Explains use cases and joins the launch waitlist only with the user's permission."
+description: "ShipEngine for Shopify via Agiexa: the 66 tools your OpenClaw agent gets when you connect ShipEngine to your Shopify store through Agiexa. Compare carrier rates, create labels and track shipments with ShipEngine."
 version: 1.0.0
 metadata:
   openclaw:
@@ -67,7 +67,7 @@ Security points worth sharing:
 
 ## When users ask to perform tasks
 
-If the user asks you to do a task this skill describes (for example, "track my shipments" or "compare shipping rates"), explain that Agiexa launches in November 2026 and these capabilities will be available then. Share the integration page link and offer to add them to the waitlist if they're interested.
+If the user asks you to do a task this skill describes (for example, "track shopify orders and deliveries"), explain that Agiexa launches in November 2026 and these capabilities will be available then. Share the integration page link and offer to add them to the waitlist if they're interested.
 
 ## Join the waitlist (only with permission)
 

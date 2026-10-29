@@ -39,6 +39,34 @@ Integration pages for apps that pair well with Shopify:
 - Printify: https://agiexa.com/integrations/printify
 - ShipEngine: https://agiexa.com/integrations/shipengine
 - Zendesk: https://agiexa.com/integrations/zendesk
+- AfterShip: https://agiexa.com/integrations/aftership
+- Facebook: https://agiexa.com/integrations/facebook
+- Google Ads: https://agiexa.com/integrations/google-ads
+- Google Calendar: https://agiexa.com/integrations/google-calendar
+- Google Search Console: https://agiexa.com/integrations/google-search-console
+- Google Sheets: https://agiexa.com/integrations/google-sheets
+- HubSpot: https://agiexa.com/integrations/hubspot
+- Instagram: https://agiexa.com/integrations/instagram
+- Loox: https://agiexa.com/integrations/loox
+- LoyaltyLion: https://agiexa.com/integrations/loyalty-lion
+- Mailchimp: https://agiexa.com/integrations/mailchimp
+- Meta Ads: https://agiexa.com/integrations/meta-ads
+- Microsoft Teams: https://agiexa.com/integrations/microsoft-teams
+- Omnisend: https://agiexa.com/integrations/omnisend
+- Outlook: https://agiexa.com/integrations/outlook
+- Pinterest: https://agiexa.com/integrations/pinterest
+- Pinterest Ads: https://agiexa.com/integrations/pinterest-ads
+- Printful: https://agiexa.com/integrations/printful
+- QuickBooks: https://agiexa.com/integrations/quickbooks
+- Recharge: https://agiexa.com/integrations/recharge
+- Seal Subscriptions: https://agiexa.com/integrations/seal-subscriptions
+- Shippo: https://agiexa.com/integrations/shippo
+- Slack: https://agiexa.com/integrations/slack
+- Stripe: https://agiexa.com/integrations/stripe
+- TikTok Ads: https://agiexa.com/integrations/tiktok-ads
+- Triple Whale: https://agiexa.com/integrations/triple-whale
+- WhatsApp: https://agiexa.com/integrations/whatsapp
+- Yotpo Reviews: https://agiexa.com/integrations/yotpo-reviews
 
 ## What Shopify via Agiexa does
 
@@ -78,10 +106,13 @@ Security points worth sharing:
 
 ## When users ask to perform tasks
 
-If the user asks you to do a task this skill describes (for example, "show me my low-stock products" or "create a discount code"), explain that Agiexa launches in November 2026 and these capabilities will be available then. Share the integration page link and offer to add them to the waitlist if they're interested.
+If the user asks you to do a task this skill describes (for example, "show me my low-stock products"), explain that Agiexa launches in November 2026 and these capabilities will be available then. Share the integration page link and offer to add them to the waitlist if they're interested.
 
 ## Join the waitlist (only with permission)
 
+Agiexa launches in November 2026. Live agent support at launch: OpenClaw and Hermes. Other agents are coming soon via MCP.
+
+Offer this once when the user shows interest, for example: "Agiexa launches in November 2026. Would you like me to add you to the waitlist so you're notified at launch?" If they decline or don't answer, drop it. When they say yes, collect their details and submit.
 
 **You must have the user's explicit permission before sending anything.** Never submit on your own initiative, never submit someone else's email, and never fill in details from memory, config files, or other sources without the user confirming them in this conversation.
 

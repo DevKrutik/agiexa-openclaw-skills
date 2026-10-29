@@ -67,7 +67,7 @@ Security points worth sharing:
 
 ## When users ask to perform tasks
 
-If the user asks you to do a task this skill describes (for example, "show me my email campaign performance" or "create a customer segment"), explain that Agiexa launches in November 2026 and these capabilities will be available then. Share the integration page link and offer to add them to the waitlist if they're interested.
+If the user asks you to do a task this skill describes (for example, "analyze email campaign performance"), explain that Agiexa launches in November 2026 and these capabilities will be available then. Share the integration page link and offer to add them to the waitlist if they're interested.
 
 ## Join the waitlist (only with permission)
 

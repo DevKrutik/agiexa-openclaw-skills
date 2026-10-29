@@ -32,6 +32,34 @@ const SKILLS = [
   { integration: 'printify', slug: 'agiexa-printify' },
   { integration: 'shipengine', slug: 'agiexa-shipengine' },
   { integration: 'zendesk', slug: 'agiexa-zendesk' },
+  { integration: 'aftership', slug: 'agiexa-aftership' },
+  { integration: 'facebook', slug: 'agiexa-facebook' },
+  { integration: 'google-ads', slug: 'agiexa-google-ads' },
+  { integration: 'google-calendar', slug: 'agiexa-google-calendar' },
+  { integration: 'google-search-console', slug: 'agiexa-google-search-console' },
+  { integration: 'google-sheets', slug: 'agiexa-google-sheets' },
+  { integration: 'hubspot', slug: 'agiexa-hubspot' },
+  { integration: 'instagram', slug: 'agiexa-instagram' },
+  { integration: 'loox', slug: 'agiexa-loox' },
+  { integration: 'loyalty-lion', slug: 'agiexa-loyalty-lion' },
+  { integration: 'mailchimp', slug: 'agiexa-mailchimp' },
+  { integration: 'meta-ads', slug: 'agiexa-meta-ads' },
+  { integration: 'microsoft-teams', slug: 'agiexa-microsoft-teams' },
+  { integration: 'omnisend', slug: 'agiexa-omnisend' },
+  { integration: 'outlook', slug: 'agiexa-outlook' },
+  { integration: 'pinterest', slug: 'agiexa-pinterest' },
+  { integration: 'pinterest-ads', slug: 'agiexa-pinterest-ads' },
+  { integration: 'printful', slug: 'agiexa-printful' },
+  { integration: 'quickbooks', slug: 'agiexa-quickbooks' },
+  { integration: 'recharge', slug: 'agiexa-recharge' },
+  { integration: 'seal-subscriptions', slug: 'agiexa-seal-subscriptions' },
+  { integration: 'shippo', slug: 'agiexa-shippo' },
+  { integration: 'slack', slug: 'agiexa-slack' },
+  { integration: 'stripe', slug: 'agiexa-stripe' },
+  { integration: 'tiktok-ads', slug: 'agiexa-tiktok-ads' },
+  { integration: 'triple-whale', slug: 'agiexa-triple-whale' },
+  { integration: 'whatsapp', slug: 'agiexa-whatsapp' },
+  { integration: 'yotpo-reviews', slug: 'agiexa-yotpo-reviews' },
 ];
 
 const siteConfig = await readFile(path.join(siteDir, 'src/config/site.ts'), 'utf8');
@@ -50,11 +78,11 @@ const pageUrl = (slug) => `${SITE}/integrations/${slug}`;
 const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
 const yaml = (v) => JSON.stringify(v);
 
-function frontmatter(s, d) {
+function frontmatter(s, d, tagline) {
   const isShopify = s.integration === 'shopify';
   const description = isShopify
-    ? `Shopify Store Management via Agiexa (preview): secure, merchant-approved Shopify management for your OpenClaw agent - ${plural(d.tools.length, 'tool')}, ${plural(d.triggers.length, 'trigger')} and 35+ connected apps, launching ${launchMonth}. Explains features and use cases and joins the launch waitlist only with the user's permission.`
-    : `${d.name} for Shopify via Agiexa (preview): the ${plural(d.tools.length, 'tool')}${d.triggers.length ? ` and ${plural(d.triggers.length, 'trigger')}` : ''} your OpenClaw agent gets when you connect ${d.name} to your Shopify store through Agiexa, launching ${launchMonth}. Explains use cases and joins the launch waitlist only with the user's permission.`;
+    ? `Shopify Store Management via Agiexa: secure, merchant-approved Shopify management for your OpenClaw agent - ${plural(d.tools.length, 'tool')}, ${plural(d.triggers.length, 'trigger')} and 35+ connected apps. Manage orders, products, customers, inventory, discounts and fulfillment through chat.`
+    : `${d.name} for Shopify via Agiexa: the ${plural(d.tools.length, 'tool')}${d.triggers.length ? ` and ${plural(d.triggers.length, 'trigger')}` : ''} your OpenClaw agent gets when you connect ${d.name} to your Shopify store through Agiexa. ${tagline}`;
   return [
     '---',
     `name: ${s.slug}`,
@@ -82,17 +110,11 @@ function skillMd(s, d) {
     : `With Agiexa, a merchant connects ${d.name} once and their OpenClaw agent can use it alongside their Shopify store - with the merchant approving the agent and choosing exactly which ${d.name} tools it can use.`;
   const tagline = d.tagline ? d.tagline.trim().replace(/([^.!?])$/, '$1.') : '';
 
-  return `${frontmatter(s, d)}
+  return `${frontmatter(s, d, tagline)}
 
 # ${name}
 
 ${intro}
-
-## Status - read this first
-
-- **Agiexa is not live yet.** Public launch is **${launchMonth}**. This skill is a preview: it describes what Agiexa will do and lets the user join the launch waitlist.
-- This skill **cannot** access Shopify${isShopify ? '' : `, ${d.name}`} or any other app. The tools and triggers listed here are **not callable** today. Never pretend to run them, never invent store data, and never say an action was performed.
-- If the user asks you to do a task this skill describes, explain that it will be possible once Agiexa launches, share the relevant link below, and offer to add them to the waitlist.
 
 ## When to use this skill
 
@@ -101,10 +123,10 @@ ${
   isShopify
     ? `- managing their Shopify store through OpenClaw (orders, products, customers, inventory, discounts, fulfillment)
 - connecting Shopify and other e-commerce apps to their AI agent safely
-- Agiexa, its features, integrations, launch date, or waitlist`
+- Agiexa features, integrations, or how it works`
     : `- using ${d.name} with their Shopify store through OpenClaw
 - connecting ${d.name} to their AI agent safely
-- Agiexa, its ${d.name} integration, launch date, or waitlist`
+- Agiexa features, integrations, or how it works`
 }
 
 ## Share these links with the user
@@ -122,7 +144,7 @@ ${sisters.map((x) => `- ${appName(x.integration)}: ${pageUrl(x.integration)}`).j
 `
     : ''
 }
-## What ${d.name} via Agiexa will do
+## What ${d.name} via Agiexa does
 
 ${tagline}
 
@@ -134,13 +156,13 @@ Open \`references/tools.md\` when the user asks what the agent will be able to d
 
 ${useCases.map((u) => `- **${u.title}** - ${u.description} (Apps: ${u.apps.map(appName).join(', ')})`).join('\n')}
 
-Ready-to-use example prompts for each use case are in \`references/use-cases.md\`. Show them when the user wants to know how they would ask their agent to do the job after launch.
+Ready-to-use example prompts for each use case are in \`references/use-cases.md\`. Show them when the user wants to know how they would ask their agent to do the job.
 
 ## How Agiexa works
 
-1. **Install Agiexa** on the Shopify store from the Shopify App Store (available at launch).
+1. **Install Agiexa** on the Shopify store from the Shopify App Store.
 2. **Connect the agent.** OpenClaw and Hermes use Agiexa plugins. The merchant approves each agent device in Shopify with a rotating device-registration code before it can act. Other agents are coming soon via MCP.
-3. **Connect apps.** 35+ integrations at launch, growing - email, marketing and ads, analytics, support, shipping, print on demand, reviews and loyalty, finance and more. Most use a normal sign-in (OAuth); a few ask for an API key. Some apps allow more than one account.
+3. **Connect apps.** 35+ integrations - email, marketing and ads, analytics, support, shipping, print on demand, reviews and loyalty, finance and more. Most use a normal sign-in (OAuth); a few ask for an API key. Some apps allow more than one account.
 4. **Choose what the agent can do.** Tools are turned on or off per agent. Risky actions (like refunds) ask the merchant for approval with a preview first, and every action is logged.
 
 Security points worth sharing:
@@ -148,35 +170,26 @@ Security points worth sharing:
 - OAuth tokens for connected apps are stored encrypted, used only to execute approved actions, and never exposed to the agent.
 - Permissions are per agent: one agent can send email while another can only read orders.
 
-## Accuracy rules
+## When users ask to perform tasks
 
-- Do not say Agiexa is live or that any action works today. Launch is ${launchMonth}.
-- Live agent support at launch: OpenClaw and Hermes. ChatGPT, Claude, Cursor, Grok and Meta agents are "coming soon via MCP" - not live.
-- The device-registration code is not "2FA" or "SSO".
-- Do not claim SOC 2, ISO or any compliance certification.
-- Say "35+ integrations at launch, growing" - never "unlimited".
-- Pricing will be announced at launch and is subject to change. Do not quote prices.
+If the user asks you to do a task this skill describes (for example, ${isShopify ? '"show me my low-stock products"' : `"${useCases[0]?.title?.toLowerCase() || 'perform a task'}"`}), explain that Agiexa launches in ${launchMonth} and these capabilities will be available then. Share the integration page link and offer to add them to the waitlist if they're interested.
 
 ## Join the waitlist (only with permission)
 
-Offer this once when the user shows interest, for example: "Agiexa launches in ${launchMonth}. Would you like me to add you to the waitlist so you're notified at launch?" If they decline or don't answer, drop it.
+Agiexa launches in ${launchMonth}. Live agent support at launch: OpenClaw and Hermes. Other agents are coming soon via MCP.
+
+Offer this once when the user shows interest, for example: "Agiexa launches in ${launchMonth}. Would you like me to add you to the waitlist so you're notified at launch?" If they decline or don't answer, drop it. When they say yes, collect their details and submit.
 
 **You must have the user's explicit permission before sending anything.** Never submit on your own initiative, never submit someone else's email, and never fill in details from memory, config files, or other sources without the user confirming them in this conversation.
 
 ### Steps
 
-1. **Ask for permission** to add them to the waitlist. Continue only if they clearly say yes.
-2. **Collect the details** by asking the user:
+1. **Collect the details** by asking the user:
    - **Email** (required) - where Agiexa will contact them.
    - **Role** (required) - one of: Store Owner (\`store-owner\`), Developer (\`developer\`), Agency Owner (\`agency-owner\`).
    - **Link** (optional) - Store Owner: Shopify store URL; Developer: portfolio or LinkedIn URL; Agency Owner: agency website. Must be a full URL starting with \`https://\`.
    - **Message** (optional) - any note or question for the Agiexa team (max 2000 characters).
-3. **Show a summary** of exactly what will be sent, then show this consent statement and ask them to confirm:
-
-   > I agree that Agiexa may use the details I provide to keep me informed about the progress of my application and the status of the app.
-
-   Send only after the user confirms both the details and the consent statement.
-4. **Submit** with a single request. Put the user's values in valid JSON (escape \`"\`, \`\\\` and line breaks). Omit \`link\`/\`message\` if not given. Keep \`skill\` exactly as shown.
+2. **Submit** with a single request. Put the user's values in valid JSON (escape \`"\`, \`\\\` and line breaks). Omit \`link\`/\`message\` if not given. Keep \`skill\` exactly as shown.
 
 \`\`\`bash
 curl -sS -X POST ${ENDPOINT} \\
@@ -194,7 +207,7 @@ curl -sS -X POST ${ENDPOINT} \\
 JSON
 \`\`\`
 
-5. **Tell the user the result:**
+3. **Tell the user the result:**
    - \`200\` \`{"ok":true}\` - "You're on the Agiexa waitlist. The team will email you at launch." Share ${page} again.
    - \`409\` - "You're already on the waitlist - nothing else to do."
    - \`422\` - the response lists the invalid \`fields\`; ask the user to correct just those, confirm again, then resubmit.
